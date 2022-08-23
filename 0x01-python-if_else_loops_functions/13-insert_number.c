@@ -16,16 +16,16 @@ listint_t *current;
 current = *head;
 new = malloc(sizeof(listint_t));
 if (new == NULL)
-return (NULL);
+	return (NULL);
 new->n = number;
 if (*head == NULL)
-*head = new;
+	*head = new;
 else
 {
-while (current->next != NULL)
+	while (current->next != NULL)
 {
-if (current->next->n > number)
-break;
+	if (current->next->n > number)
+		break;
 current = current->next;
 }
 new->next = current->next;
