@@ -11,7 +11,7 @@ filename = "add_item.json"
 
 try:
     json_list = load_from_json_file(filename)
-except json_list.DoesNotExist:
+except:
     json_list = []
     for arg in argv[1:]:
         json_list.append(arg)
